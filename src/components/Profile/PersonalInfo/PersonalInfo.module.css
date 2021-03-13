@@ -1,0 +1,9 @@
+.avatar {
+ width: 300px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  color: brown;
+}
