@@ -3,6 +3,13 @@ import personalInfo from './PersonalInfo.module.css';
 const PersonalInfo = () => {
   return (
     <div className={personalInfo.info}>
+      <div>
+        <img
+          src="https://static.brusselsairlines.com/_img/destinationPage2/Italy/Venice/Venice-canal-grande.png"
+          alt="venice"
+          className={personalInfo.content__img}
+        />
+        </div>
         <img
           src="https://i.pinimg.com/originals/2b/09/51/2b0951e345a74f441e12a70f8f92227f.jpg"
           alt="BELKA"

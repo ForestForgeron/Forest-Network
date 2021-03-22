@@ -10,6 +10,7 @@ const MyPosts = () => {
         cols="70"
         rows="5"
         placeholder="Your news..."
+        className={myPosts.newPostField}
       >
        
       </textarea>
