@@ -2,6 +2,28 @@ import myPosts from './MyPosts.module.css';
 import Post from './Post/Post';
 
 const MyPosts = () => {
+
+  const postsList = [
+    {
+      id: 1,
+      post: 'Hello world!',
+      likesCount: 15,
+    },
+
+    {
+      id: 2,
+      post: 'Feel the power of the youth!',
+      likesCount: 32,
+    },
+
+    {
+      id: 3,
+      post: 'Dabu-di-dabu-dai',
+      likesCount: 10,
+    },
+
+  ];
+
   return (
     <div>
       <textarea
@@ -14,9 +36,10 @@ const MyPosts = () => {
       >
        
       </textarea>
-      <Post message="Hello world!" likesCount="15"/>
-      <Post message="Feel the power of the youth!" likesCount="31" />
-      <Post message="Dabu-di-dabu-dai" likesCount="17" />
+      <Post message={postsList[0].post} likesCount={postsList[0].likesCount} />
+      <Post message={postsList[1].post} likesCount={postsList[1].likesCount} />
+      <Post message={postsList[2].post} likesCount={postsList[2].likesCount} />
+      
     </div>
   );
 };
