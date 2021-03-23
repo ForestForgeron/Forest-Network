@@ -40,6 +40,16 @@ const Dialogues = () => {
       name: 'Gena',
     },
 
+    {
+      id: 4,
+      name: 'Ilya',
+    },
+
+    {
+      id: 5,
+      name: 'Victor',
+    },
+
   ];
 
   const messagesList = [
@@ -58,31 +68,39 @@ const Dialogues = () => {
       message: 'Might and Magic',
     },
 
+    {
+      id: 4,
+      message: 'yo',
+    },
+
+    {
+      id: 5,
+      message: 'me gusto',
+    },
+
   ];
+
+  const authorsList = dialoguesAuthors.map(
+    author => <Dialogue name={author.name} id={author.id} />
+  );
+
+  const messagesItems = messagesList.map(
+    message => <Message message={message.message} />
+  );
 
   return (
     <div className={dialogues.dialogues}>
       <div className={dialogues.dialoguesList}>
         
         <div className={dialogues.dialogue}>
-          <Dialogue name={dialoguesAuthors[0].name} id={dialoguesAuthors[0].id} />
+          { authorsList }
         </div>
-        <div className={dialogues.dialogue}>
-          <Dialogue name={dialoguesAuthors[1].name} id={dialoguesAuthors[1].id} />
-        </div>
-        <div className={dialogues.dialogue}>
-          <Dialogue name={dialoguesAuthors[2].name} id={dialoguesAuthors[2].id} />
-        </div>
-        
-        
+  
       </div>
 
       
         <div className={dialogues.messages}>
-          <Message message={messagesList[0].message} />
-          <Message message={messagesList[1].message} />
-          <Message message={messagesList[2].message} />
-
+          { messagesItems }
         </div>
     </div>
   );
