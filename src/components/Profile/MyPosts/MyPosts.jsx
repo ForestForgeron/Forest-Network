@@ -24,6 +24,10 @@ const MyPosts = () => {
 
   ];
 
+  const postsItems = postsList.map(
+    post => <Post message={post.post} likesCount={post.likesCount} />
+  );
+
   return (
     <div>
       <textarea
@@ -36,10 +40,8 @@ const MyPosts = () => {
       >
        
       </textarea>
-      <Post message={postsList[0].post} likesCount={postsList[0].likesCount} />
-      <Post message={postsList[1].post} likesCount={postsList[1].likesCount} />
-      <Post message={postsList[2].post} likesCount={postsList[2].likesCount} />
       
+      { postsItems }
     </div>
   );
 };
