@@ -23,35 +23,65 @@ const Message = (props) => {
 };
 
 const Dialogues = () => {
+
+  const dialoguesAuthors = [
+    {
+      id: 1,
+      name: 'Olga',
+    },
+
+    {
+      id: 2,
+      name: 'Andrey',
+    },
+
+    {
+      id: 3,
+      name: 'Gena',
+    },
+
+  ];
+
+  const messagesList = [
+    {
+      id: 1,
+      message: 'Hi! How are you?',
+    },
+
+    {
+      id: 2,
+      message: 'Nice weather today!',
+    },
+
+    {
+      id: 3,
+      message: 'Might and Magic',
+    },
+
+  ];
+
   return (
     <div className={dialogues.dialogues}>
       <div className={dialogues.dialoguesList}>
         
         <div className={dialogues.dialogue}>
-          <Dialogue name="Olga" id='1' />
+          <Dialogue name={dialoguesAuthors[0].name} id={dialoguesAuthors[0].id} />
         </div>
         <div className={dialogues.dialogue}>
-          <Dialogue name="Ilya" id='2' />
+          <Dialogue name={dialoguesAuthors[1].name} id={dialoguesAuthors[1].id} />
         </div>
         <div className={dialogues.dialogue}>
-          <Dialogue name="Gena" id='3' />        
+          <Dialogue name={dialoguesAuthors[2].name} id={dialoguesAuthors[2].id} />
         </div>
-        <div className={dialogues.dialogue}>
-          <Dialogue name="Andrey" id='4' />        
-        </div>
-        <div className={dialogues.dialogue}>
-          <Dialogue name="Victor" id='5' />        
-        </div>
+        
         
       </div>
 
       
         <div className={dialogues.messages}>
-          <Message message="Hi! How are you?" />
-          <Message message="Nice weather today!" />
-          <Message message="Might and Magic" />
-          <Message message="Let's go" />
-          <Message message="Forest theme, man" />
+          <Message message={messagesList[0].message} />
+          <Message message={messagesList[1].message} />
+          <Message message={messagesList[2].message} />
 
         </div>
     </div>
