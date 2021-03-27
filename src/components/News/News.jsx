@@ -1,9 +1,10 @@
 import news from './News.module.css';
 
-const News = () => {
+const News = (props) => {
+  
   return (
     <div>
-      news
+      
     </div>
   );
 };

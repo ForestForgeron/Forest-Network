@@ -1,30 +1,11 @@
 import myPosts from './MyPosts.module.css';
 import Post from './Post/Post';
 
-const MyPosts = () => {
+const MyPosts = (props) => {
 
-  const postsList = [
-    {
-      id: 1,
-      post: 'Hello world!',
-      likesCount: 15,
-    },
+  
 
-    {
-      id: 2,
-      post: 'Feel the power of the youth!',
-      likesCount: 32,
-    },
-
-    {
-      id: 3,
-      post: 'Dabu-di-dabu-dai',
-      likesCount: 10,
-    },
-
-  ];
-
-  const postsItems = postsList.map(
+  const postsItems = props.postsList.map(
     post => <Post message={post.post} likesCount={post.likesCount} />
   );
 

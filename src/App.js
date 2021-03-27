@@ -11,6 +11,84 @@ import Profile from './components/Profile/Profile';
 
 
 function App() {
+
+  const conversationsList = [
+    {
+      id: 1,
+      name: 'Olga',
+    },
+
+    {
+      id: 2,
+      name: 'Andrey',
+    },
+
+    {
+      id: 3,
+      name: 'Gena',
+    },
+
+    {
+      id: 4,
+      name: 'Ilya',
+    },
+
+    {
+      id: 5,
+      name: 'Victor',
+    },
+
+  ];
+
+  const messagesList = [
+    {
+      id: 1,
+      message: 'Hi! How are you?',
+    },
+
+    {
+      id: 2,
+      message: 'Nice weather today!',
+    },
+
+    {
+      id: 3,
+      message: 'Might and Magic',
+    },
+
+    {
+      id: 4,
+      message: 'yo',
+    },
+
+    {
+      id: 5,
+      message: 'me gusto',
+    },
+
+  ];
+
+  const postsList = [
+    {
+      id: 1,
+      post: 'Hello world!',
+      likesCount: 15,
+    },
+
+    {
+      id: 2,
+      post: 'Feel the power of the youth!',
+      likesCount: 32,
+    },
+
+    {
+      id: 3,
+      post: 'Dabu-di-dabu-dai',
+      likesCount: 10,
+    },
+
+  ];
+
   return (
     <BrowserRouter>
       <div className="wrapper">
@@ -18,9 +96,24 @@ function App() {
         <Nav />
         
         <div className="content_wrapper">
-          <Route path='/dialogues' component={Dialogues} />
-          <Route path='/profile' component={Profile} />
-          <Route path='/news' component={News} />
+          <Route
+            path='/dialogues'
+            render={
+              () => <Dialogues conversationsList={conversationsList} messagesList={messagesList} /> 
+            }
+          />
+          <Route
+            path='/profile'
+            render={
+              () => <Profile postsList={postsList} />
+            }
+          />
+          <Route
+            path='/news'
+            render={
+              () => <News a="2" b="3" />
+            } 
+          />
           <Route path='/music' component={Music} />
           <Route path='/settings' component={Settings} />
         </div>
