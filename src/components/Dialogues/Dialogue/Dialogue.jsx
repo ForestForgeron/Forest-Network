@@ -6,7 +6,7 @@ const Dialogue = (props) => {
   return (
     <div className={dialogues.dialogue}>
       <NavLink to={'/dialogues/' + props.id}>
-        {props.name}
+        { props.name }
       </NavLink>
       
     </div>
